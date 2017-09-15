@@ -1,0 +1,42 @@
+<ion-view view-title="Songhop" hide-nav-bar="true" class="splash-page">
+  <ion-content scroll="false">
+
+    <div class="padding logo">
+      <h1>Ciddi Logo</h1>
+    </div>
+
+
+    <div class="login-form">
+    <div class="card">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Kullanıcı adı</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Şifre</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+     </div>
+     <div>
+     
+      </div>
+      </div>
+
+      <div class="padding-left padding-right">
+        <button class="button button-block action-button button-positive" 
+        ng-click="signInWithEmail(loginData.username, loginData.password)">
+          Bağlan
+        </button>
+      </div>
+      <div class="padding-left padding-right">
+         <button ng-click="loginWithFB()" class="button button-full bold fb-button">
+        <i class="ion-social-facebook fb-icon"></i> Facebook ile bağlan
+         </button>
+      </div>
+      <div class="padding-left padding-right">
+        veya Üye ol
+      </div>
+      
+</ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="Favoriler | {{ username }}" class="favorites-page">
+  <ion-content>
+
+    <ion-list>
+      <ion-item  ng-repeat="person in favorites" class="item-avatar"
+       ng-click="openPerson(person)">
+        <img ng-src="{{ person.image }}">
+        <h2>{{person.name}}</h2>
+        <p>{{person.age}}</p>
+        <ion-option-button class="button-assertive"
+                       ng-click="removePerson(person, $index)">
+          <i class="ion-minus-circled"></i>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

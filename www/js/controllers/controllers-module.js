@@ -1,0 +1,1 @@
+angular.module('ciddi.controllers', ['ionic', 'ciddi.services'])

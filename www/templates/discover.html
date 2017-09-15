@@ -1,0 +1,40 @@
+<ion-view view-title="Keşfet" class="discover-page">
+  <ion-content scroll="false">
+
+
+    <div class="list card current-song" 
+    ng-class="{skipped: currentPerson.rated == false,
+     favorited: currentPerson.rated == true}"
+    ng-show="currentPerson && !currentPerson.hide"
+    >
+
+      <div class="item item-image">
+        <img ng-src="{{currentPerson.image}}">
+      </div>
+
+      <div class="item">
+        <h2>{{currentPerson.name}},{{currentPerson.age}} 
+          <span ng-hide="currentPerson.loaded"><i class="ion-loading-c"></i></span>
+        </h2>
+        <p>{{currentPerson.designation}}</p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" ng-click="sendFeedback(false)">
+          <i class="icon ion-close"></i>
+          OLMAZ
+        </a>
+        <a class="tab-item" ng-click="sendFeedback(true)">
+          <i class="icon ion-checkmark"></i>
+          OLUR
+        </a>
+      </div>
+      <div class="img-lookahead">
+        <img ng-src="{{ nextAlbumImg() }}" />
+      </div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

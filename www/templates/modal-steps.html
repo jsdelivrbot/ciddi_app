@@ -1,0 +1,53 @@
+<ion-modal-view class="irk-modal">
+
+<irk-ordered-tasks>
+
+  <irk-task>
+    <irk-instruction-step id="s1" title="Selam." text="Sizi biraz tanıyalım."
+    button-text="Başla"/>
+  </irk-task>
+
+  <irk-task>
+    <irk-boolean-question-step id="q3" title="Sizce böylemi?" 
+    text="Evet veya Hayır?" true-value="yes" false-value="no" true-text="Evet" false-text="Hayır"/>
+  </irk-task>
+
+  <irk-task>
+    <irk-text-question-step id="q4" title="" text="Kendindidn bahset hele" placeholder="hede mede" />
+  </irk-task>
+
+ 
+
+  <irk-task>
+    <irk-text-choice-question-step id="q6" title="Bunlardan hangisi sana uyar" text="seç bakim" style="single">
+      <irk-text-choice text="söylede 1" value="1"></irk-text-choice>
+      <irk-text-choice text="söylede 2" value="2"></irk-text-choice>
+      <irk-text-choice text="söylede 3" value="3" detail-text=" falamfakf  kmsdf">
+      </irk-text-choice>
+    </irk-text-choice-question-step>
+  </irk-task>
+
+ <irk-task>
+    <irk-image-choice-question-step id="q12" title="Birini seç" text="Birini seç.">
+      <irk-image-choice text="Sad" value="sad" normal-state-image="ion-sad-outline" selected-state-image="ion-sad"></irk-image-choice>
+      <irk-image-choice text="Happy" value="happy" normal-state-image="ion-happy-outline" selected-state-image="ion-happy"></irk-image-choice>
+    </irk-image-choice-question-step>
+  </irk-task>
+
+  <irk-task>
+    <irk-image-choice-question-step id="q13" title="hangisi en sevimli" Hangisi text="seç">
+      <irk-image-choice text="Burger" value="burger" type="image" normal-state-image="choice-food-burger" selected-state-image="choice-food-burger"></irk-image-choice>
+      <irk-image-choice text="Pizza" value="pizza" type="image" normal-state-image="choice-food-pizza" selected-state-image="choice-food-pizza"></irk-image-choice>
+    </irk-image-choice-question-step>
+  </irk-task>
+
+
+
+  <irk-task>
+    <irk-instruction-step id="s2" title="bittıı" text="Tmamdir" 
+    button-text="Tamam" ng-click="getResults()" />
+  </irk-task>
+
+</irk-ordered-tasks>
+
+</ion-modal-view>
